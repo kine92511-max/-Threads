@@ -30,3 +30,12 @@ empathy-writer(共感/Tips/エッセイ)   affiliate-writer(商品紹介)
       ↓                              ↓
                 proofreader(校正)
 ```
+
+## 投稿ストック(`strategy/_pipeline/`)
+
+上記フローを実際に動かして作成した初週分(19本)。
+
+- [week1_briefs.md](strategy/_pipeline/week1_briefs.md) — content-structurerによる構成案
+- [week1_drafts_empathy.md](strategy/_pipeline/week1_drafts_empathy.md) — empathy-writerによる本文(17本)
+- [week1_drafts_affiliate.md](strategy/_pipeline/week1_drafts_affiliate.md) — affiliate-writerによる本文(2本、型番・価格は要差し替え)
+- **[week1_final.md](strategy/_pipeline/week1_final.md) — proofreader校正済みの最終版(コピペ用はこれを使う)**
