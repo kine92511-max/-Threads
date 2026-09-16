@@ -5,6 +5,7 @@
 ## ペルソナ・戦略
 
 - [strategy/01_persona.md](strategy/01_persona.md) — アカウントのペルソナ、家事・育児の分担、生活スケジュール、住まいの情報
+- [strategy/02_concept_tone_ratio.md](strategy/02_concept_tone_ratio.md) — コンセプト・トーン・コンテンツ比率(バズる設計、リサーチ根拠付き)
 
 ## 専門エージェント(`.claude/agents/`)
 
