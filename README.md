@@ -8,6 +8,7 @@
 - [strategy/02_concept_tone_ratio.md](strategy/02_concept_tone_ratio.md) — コンセプト・トーン・コンテンツ比率(バズる設計、リサーチ根拠付き)
 - [strategy/03_content_calendar.md](strategy/03_content_calendar.md) — 投稿カレンダー(基本3・上限5の可変制)
 - [strategy/04_post_templates.md](strategy/04_post_templates.md) — 投稿テンプレート(バズる型のリサーチ根拠付き)
+- [strategy/05_reply_guidelines.md](strategy/05_reply_guidelines.md) — リプライ対応ガイドライン(会話を伸ばす返信の型)
 
 ## 専門エージェント(`.claude/agents/`)
 
