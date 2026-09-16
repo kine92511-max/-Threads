@@ -50,9 +50,12 @@ empathy-writer(共感/Tips/エッセイ)   affiliate-writer(商品紹介)
 
 `week1_final.md`(7:00/12:00/21:00枠)と`affiliate_week_final.md`(10:00/17:00枠)を組み合わせると、1日5投稿×7日分のストックが揃う。
 
-## アフィリエイトリンク
+## アフィリエイトリンク・商品リサーチ
 
-- [strategy/07_affiliate_link_setup.md](strategy/07_affiliate_link_setup.md) — 楽天アフィリエイトの登録・リンク発行手順(`affiliate_week_final.md`の`[リンクを挿入]`を埋めるための案内)
+- [strategy/07_affiliate_link_setup.md](strategy/07_affiliate_link_setup.md) — 楽天アフィリエイトの登録・リンク発行手順(`affiliate_week_final.md`の`[リンクを挿入]`を埋めるための案内、手動)
+- [strategy/_pipeline/affiliate_products.md](strategy/_pipeline/affiliate_products.md) — Web検索で調べた実商品候補(14枠分、手動)
+- [strategy/08_rakuten_api_setup.md](strategy/08_rakuten_api_setup.md) — 楽天ウェブサービスAPIのセットアップ手順(商品検索を自動化、アフィリエイトID指定でリンクも自動取得)
+- `scripts/search_rakuten_items.py` — `.env`にAPI情報を設定して実行すると、14枠分の商品を自動検索し`data/rakuten_products/`に保存する
 
 ## インサイト分析(Threads API)
 
