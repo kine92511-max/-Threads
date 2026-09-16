@@ -14,10 +14,13 @@ Threads「ラクして楽しむパパ育児(@papa_rakuiku)」をバズらせ、�
 | [strategy/05_growth_tactics.md](strategy/05_growth_tactics.md) | エンゲージメント・グロース施策 |
 | [strategy/06_kpi_analytics.md](strategy/06_kpi_analytics.md) | KPI設計と振り返りフォーマット |
 | [strategy/07_week1_stock.md](strategy/07_week1_stock.md) | 初週分のコピペ用投稿ストック |
+| [strategy/08_research_notes.md](strategy/08_research_notes.md) | リサーチ担当:ネタ元・トレンド調査メモ |
+| [strategy/09_week2_stock.md](strategy/09_week2_stock.md) | 原案担当→添削担当を経た第2弾投稿ストック |
 
 ## 進め方
 
 1. `01_account_strategy.md` でコンセプトを確定
 2. `02_role_division.md` の工程フローに沿って一人で回す
-3. `07_week1_stock.md` の投稿をそのままコピペして初週の投稿を開始(以降は`04_post_templates.md`を元に`03_content_calendar.md`のサイクルで作成)
-4. `06_kpi_analytics.md` のフォーマットで週次振り返り
+3. `07_week1_stock.md` の投稿をそのままコピペして初週の投稿を開始
+4. 以降は「リサーチ(`08`)→原案作成→添削(`09`のように仕上げる)」のサイクルでストックを継続生産(`04_post_templates.md`のテンプレ・チェックリストを使用)
+5. `06_kpi_analytics.md` のフォーマットで週次振り返り
