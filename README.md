@@ -6,7 +6,7 @@
 
 - [strategy/01_persona.md](strategy/01_persona.md) — アカウントのペルソナ、家事・育児の分担、生活スケジュール、住まいの情報
 - [strategy/02_concept_tone_ratio.md](strategy/02_concept_tone_ratio.md) — コンセプト・トーン・コンテンツ比率(バズる設計、リサーチ根拠付き)
-- [strategy/03_content_calendar.md](strategy/03_content_calendar.md) — 投稿カレンダー(基本3・上限5の可変制)
+- [strategy/03_content_calendar.md](strategy/03_content_calendar.md) — 投稿カレンダー(1日5投稿・固定時間帯:7/10/12/17/21時、10時と17時がアフィリエイト枠)
 - [strategy/04_post_templates.md](strategy/04_post_templates.md) — 投稿テンプレート(バズる型のリサーチ根拠付き)
 - [strategy/05_reply_guidelines.md](strategy/05_reply_guidelines.md) — リプライ対応ガイドライン(会話を伸ばす返信の型)
 
@@ -34,12 +34,21 @@ empathy-writer(共感/Tips/エッセイ)   affiliate-writer(商品紹介)
 
 ## 投稿ストック(`strategy/_pipeline/`)
 
-上記フローを実際に動かして作成した初週分(19本)。
+### 初週の基本枠(7:00/12:00/21:00相当、17本)
 
 - [week1_briefs.md](strategy/_pipeline/week1_briefs.md) — content-structurerによる構成案
 - [week1_drafts_empathy.md](strategy/_pipeline/week1_drafts_empathy.md) — empathy-writerによる本文(17本)
-- [week1_drafts_affiliate.md](strategy/_pipeline/week1_drafts_affiliate.md) — affiliate-writerによる本文(2本、型番・価格は要差し替え)
-- **[week1_final.md](strategy/_pipeline/week1_final.md) — proofreader校正済みの最終版(コピペ用はこれを使う)**
+- [week1_drafts_affiliate.md](strategy/_pipeline/week1_drafts_affiliate.md) — 旧アフィリエイト2本を有益・共感系に書き直したもの
+- **[week1_final.md](strategy/_pipeline/week1_final.md) — proofreader校正済みの最終版**
+
+### アフィリエイト固定枠(10:00/17:00、全14本)
+
+- [affiliate_research.md](strategy/_pipeline/affiliate_research.md) — research-analystによる商品カテゴリのリサーチ(15カテゴリ)
+- [affiliate_week_briefs.md](strategy/_pipeline/affiliate_week_briefs.md) — content-structurerによる構成案
+- [affiliate_week_drafts.md](strategy/_pipeline/affiliate_week_drafts.md) — affiliate-writerによる本文
+- **[affiliate_week_final.md](strategy/_pipeline/affiliate_week_final.md) — proofreader校正済みの最終版(コピペ用はこれを使う。リプ欄用のPR付き案内文もセットで記載)**
+
+`week1_final.md`(7:00/12:00/21:00枠)と`affiliate_week_final.md`(10:00/17:00枠)を組み合わせると、1日5投稿×7日分のストックが揃う。
 
 ## インサイト分析(Threads API)
 
