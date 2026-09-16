@@ -50,6 +50,10 @@ empathy-writer(共感/Tips/エッセイ)   affiliate-writer(商品紹介)
 
 `week1_final.md`(7:00/12:00/21:00枠)と`affiliate_week_final.md`(10:00/17:00枠)を組み合わせると、1日5投稿×7日分のストックが揃う。
 
+## アフィリエイトリンク
+
+- [strategy/07_affiliate_link_setup.md](strategy/07_affiliate_link_setup.md) — 楽天アフィリエイトの登録・リンク発行手順(`affiliate_week_final.md`の`[リンクを挿入]`を埋めるための案内)
+
 ## インサイト分析(Threads API)
 
 - [strategy/06_api_setup.md](strategy/06_api_setup.md) — アクセストークンの取得手順(要Meta Developer設定)
