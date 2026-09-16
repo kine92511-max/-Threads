@@ -40,3 +40,9 @@ empathy-writer(共感/Tips/エッセイ)   affiliate-writer(商品紹介)
 - [week1_drafts_empathy.md](strategy/_pipeline/week1_drafts_empathy.md) — empathy-writerによる本文(17本)
 - [week1_drafts_affiliate.md](strategy/_pipeline/week1_drafts_affiliate.md) — affiliate-writerによる本文(2本、型番・価格は要差し替え)
 - **[week1_final.md](strategy/_pipeline/week1_final.md) — proofreader校正済みの最終版(コピペ用はこれを使う)**
+
+## インサイト分析(Threads API)
+
+- [strategy/06_api_setup.md](strategy/06_api_setup.md) — アクセストークンの取得手順(要Meta Developer設定)
+- `scripts/fetch_threads_insights.py` — `.env`にトークンを設定して実行すると、アカウント/投稿単位のインサイトを`data/insights/`に保存する
+- `.env.example` をコピーして`.env`を作成し、`THREADS_ACCESS_TOKEN`・`THREADS_USER_ID`を設定する(`.env`はgit管理外)
