@@ -13,10 +13,11 @@ Threads「ラクして楽しむパパ育児(@papa_rakuiku)」をバズらせ、�
 | [strategy/04_post_templates.md](strategy/04_post_templates.md) | バズりやすい投稿テンプレート・実例 |
 | [strategy/05_growth_tactics.md](strategy/05_growth_tactics.md) | エンゲージメント・グロース施策 |
 | [strategy/06_kpi_analytics.md](strategy/06_kpi_analytics.md) | KPI設計と振り返りフォーマット |
+| [strategy/07_week1_stock.md](strategy/07_week1_stock.md) | 初週分のコピペ用投稿ストック |
 
 ## 進め方
 
 1. `01_account_strategy.md` でコンセプトを確定
 2. `02_role_division.md` の工程フローに沿って一人で回す
-3. `04_post_templates.md` を元に週次で投稿を作成(`03_content_calendar.md`のサイクルに沿う)
+3. `07_week1_stock.md` の投稿をそのままコピペして初週の投稿を開始(以降は`04_post_templates.md`を元に`03_content_calendar.md`のサイクルで作成)
 4. `06_kpi_analytics.md` のフォーマットで週次振り返り
