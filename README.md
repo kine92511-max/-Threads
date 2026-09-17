@@ -18,7 +18,7 @@
 2. [content-structurer](.claude/agents/content-structurer.md) — 投稿の構成担当
 3. [empathy-writer](.claude/agents/empathy-writer.md) — 共感・有益情報系の投稿執筆担当
 4. [affiliate-writer](.claude/agents/affiliate-writer.md) — アフィリエイト系の投稿執筆担当
-5. [proofreader](.claude/agents/proofreader.md) — 校正担当
+5. [proofreader](.claude/agents/proofreader.md) — 校正担当(誤字脱字・法令リスクに加え、**事実確認(ファクトチェック)も担当**。年齢相応の発達描写か、商品特徴が商品ページの記載と一致しているかをWebSearch/WebFetchで確認し、根拠を残す)
 
 ### 基本フロー
 
@@ -66,4 +66,11 @@ empathy-writer(共感/Tips/エッセイ)   affiliate-writer(商品紹介)
 ## 補足(別ブランチから統合)
 
 - `rakuten_search.py` — 楽天API接続テスト用スクリプト。**楽天のAPI仕様が2026年2月頃に変更されている**ことが判明済み(詳細は[strategy/08_rakuten_api_setup.md](strategy/08_rakuten_api_setup.md)末尾を参照)。サーバーサイドからの呼び出しが未解決の403エラーで失敗しており、楽天サポートに問い合わせ中。
-- `content/` — 実際の投稿30件(2026年9月分)をスクリーンショットから全数書き起こし・検証したデータ(CSV/JSON)と、そこから抽出したテンプレート、9/18分の下書き。`strategy/_pipeline/`の投稿ストックと合わせて、型の妥当性チェックに使える。
+- `content/` — 実際の投稿30件(2026年9月分)をスクリーンショットから全数書き起こし・検証したデータ(CSV/JSON)と、そこから抽出したテンプレート、日次の投稿ストック(`YYYY-MM-DD.md`)。`strategy/_pipeline/`の投稿ストックと合わせて、型の妥当性チェックに使える。
+
+## 日次投稿ストックの作り方(`content/YYYY-MM-DD.md`)
+
+1. research-analyst → content-structurer → empathy-writer/affiliate-writer → proofreader の順で5本(7:00・10:00・12:00・17:00・21:00)を作成する
+2. **proofreaderの校正時に必ずファクトチェックを行う**(発達段階の描写が年齢相応か、アフィリエイト商品の特徴が商品ページの実際の記載と一致しているか)
+3. 各投稿の下に**「根拠(ファクトチェック)」欄を設け、確認した出典URLや商品ページの確認結果を残す**。創作・一般的なあるあるの範囲であることが分かっている場合はその旨明記する(`content/2026-09-18.md`が実例)
+4. 過去に「2歳児が全力疾走する」という不正確な描写や、商品ページと異なる素材(シリコン製→実際はポリエステル/TPU)を書いてしまった事例があるため、**具体的な事実主張は必ず検索・商品ページ確認で裏付けを取る**こと
