@@ -14,7 +14,7 @@
 
 投稿を作るまでの工程を5つの役割に分け、それぞれ専属のエージェントとして定義している。
 
-1. [research-analyst](.claude/agents/research-analyst.md) — テーマ・読者リサーチ担当
+1. [research-analyst](.claude/agents/research-analyst.md) — テーマ・読者リサーチ担当(**SNS優先**: Threads/X/Instagramを`site:`検索で調べ、悩み/共感・本音/関心・話題に分類する。SNSで見つからない場合のみ一般Web検索にフォールバック)
 2. [content-structurer](.claude/agents/content-structurer.md) — 投稿の構成担当
 3. [empathy-writer](.claude/agents/empathy-writer.md) — 共感・有益情報系の投稿執筆担当
 4. [affiliate-writer](.claude/agents/affiliate-writer.md) — アフィリエイト系の投稿執筆担当
