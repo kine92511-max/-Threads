@@ -1,0 +1,11 @@
+{
+  "timezone": "Asia/Tokyo",
+  "daily_slots": [
+    { "time": "07:00", "template": "template1", "affiliate": false },
+    { "time": "10:00", "template": "template2", "affiliate": true },
+    { "time": "12:00", "template": "template3", "affiliate": false },
+    { "time": "17:00", "template": "template2", "affiliate": true },
+    { "time": "21:00", "template": "template4", "affiliate": false }
+  ],
+  "workflow_note": "12:00と21:00はtemplate3/template4を日替わりでローテーションしてもよい(毎日同じだと単調になるため)。"
+}
