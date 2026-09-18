@@ -37,7 +37,7 @@ RAKUTEN_AFFILIATE_ID=取得したアフィリエイトID(省略可)
 python3 scripts/search_rakuten_items.py
 ```
 
-`strategy/_pipeline/affiliate_week_briefs.md`の14枠に対応するキーワードで検索し、
+旧アフィリエイト固定枠14枠分の構成案(現在は`.claude/agents/構成担当/CLAUDE.md`末尾の「過去の成果物(参考)」に移動済み)に対応するキーワードで検索し、
 結果(商品名・価格・レビュー数・商品URL・アフィリエイトURL)を`data/rakuten_products/`に保存する。
 
 ## 利用制限

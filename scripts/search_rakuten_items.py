@@ -23,7 +23,7 @@ REQUEST_INTERVAL_SEC = 1.1  # 楽天APIのレート制限(1秒1リクエスト)�
 REPO_ROOT = Path(__file__).resolve().parent.parent
 OUTPUT_DIR = REPO_ROOT / "data" / "rakuten_products"
 
-# strategy/_pipeline/affiliate_week_briefs.md の14枠に対応する検索キーワード
+# 旧アフィリエイト固定枠14枠分の構成案(現在は.claude/agents/構成担当/CLAUDE.md末尾に移動済み)の14枠に対応する検索キーワード
 SLOTS = [
     ("Day1・10:00", "工事不要 食洗機 据え置き"),
     ("Day1・17:00", "ヒップシート 抱っこ紐"),

@@ -39,28 +39,22 @@
               校正担当(校正)
 ```
 
-## 投稿ストック(`strategy/_pipeline/`)
+## 旧・初週試作ストック(過去の成果物、参考用)
 
-### 初週の基本枠(7:00/12:00/21:00相当、17本)
+`strategy/_pipeline/`にあった初週試作分(構成案・ドラフト・校正済み最終版、計10ファイル)は、
+**担当した各エージェントの`CLAUDE.md`(`.claude/agents/<エージェント名>/CLAUDE.md`)の末尾に
+「過去の成果物(参考)」として移動済み**。`strategy/_pipeline/`フォルダ自体は削除した。実投稿には使わず、
+型の妥当性チェックの参考程度に留めること(過去の試作であり、現行のSNS優先リサーチ体制以前のもの)。
 
-- [week1_briefs.md](strategy/_pipeline/week1_briefs.md) — content-structurerによる構成案
-- [week1_drafts_empathy.md](strategy/_pipeline/week1_drafts_empathy.md) — empathy-writerによる本文(17本)
-- [week1_drafts_affiliate.md](strategy/_pipeline/week1_drafts_affiliate.md) — 旧アフィリエイト2本を有益・共感系に書き直したもの
-- **[week1_final.md](strategy/_pipeline/week1_final.md) — proofreader校正済みの最終版**
-
-### アフィリエイト固定枠(10:00/17:00、全14本)
-
-- [affiliate_research.md](strategy/_pipeline/affiliate_research.md) — research-analystによる商品カテゴリのリサーチ(15カテゴリ)
-- [affiliate_week_briefs.md](strategy/_pipeline/affiliate_week_briefs.md) — content-structurerによる構成案
-- [affiliate_week_drafts.md](strategy/_pipeline/affiliate_week_drafts.md) — affiliate-writerによる本文
-- **[affiliate_week_final.md](strategy/_pipeline/affiliate_week_final.md) — proofreader校正済みの最終版(コピペ用はこれを使う。リプ欄用のPR付き案内文もセットで記載)**
-
-`week1_final.md`(7:00/12:00/21:00枠)と`affiliate_week_final.md`(10:00/17:00枠)を組み合わせると、1日5投稿×7日分のストックが揃う。
+- リサーチ担当 → 商品カテゴリのリサーチ・実商品候補
+- 構成担当 → 初週/アフィリエイト固定枠の構成案
+- 共感ライター → 初週の共感/Tips系ドラフト
+- アフィリエイトライター → アフィリエイト固定枠の本文ドラフト
+- 校正担当 → 校正済みの最終版
 
 ## アフィリエイトリンク・商品リサーチ
 
-- [strategy/07_affiliate_link_setup.md](strategy/07_affiliate_link_setup.md) — 楽天アフィリエイトの登録・リンク発行手順(`affiliate_week_final.md`の`[リンクを挿入]`を埋めるための案内、手動)
-- [strategy/_pipeline/affiliate_products.md](strategy/_pipeline/affiliate_products.md) — Web検索で調べた実商品候補(14枠分、手動)
+- [strategy/07_affiliate_link_setup.md](strategy/07_affiliate_link_setup.md) — 楽天アフィリエイトの登録・リンク発行手順(手動)
 - [strategy/08_rakuten_api_setup.md](strategy/08_rakuten_api_setup.md) — 楽天ウェブサービスAPIのセットアップ手順(商品検索を自動化、アフィリエイトID指定でリンクも自動取得)
 - `scripts/search_rakuten_items.py` — `.env`にAPI情報を設定して実行すると、14枠分の商品を自動検索し`data/rakuten_products/`に保存する
 
@@ -73,7 +67,7 @@
 ## 補足(別ブランチから統合)
 
 - `rakuten_search.py` — 楽天API接続テスト用スクリプト。**楽天のAPI仕様が2026年2月頃に変更されている**ことが判明済み(詳細は[strategy/08_rakuten_api_setup.md](strategy/08_rakuten_api_setup.md)末尾を参照)。サーバーサイドからの呼び出しが未解決の403エラーで失敗しており、楽天サポートに問い合わせ中。
-- `content/` — 実際の投稿30件(2026年9月分)をスクリーンショットから全数書き起こし・検証したデータ(CSV/JSON)と、そこから抽出したテンプレート、日次の投稿ストック(`YYYY-MM-DD.md`)。`strategy/_pipeline/`の投稿ストックと合わせて、型の妥当性チェックに使える。
+- `content/` — 実際の投稿30件(2026年9月分)をスクリーンショットから全数書き起こし・検証したデータ(CSV/JSON)と、そこから抽出したテンプレート、日次の投稿ストック(`YYYY-MM-DD.md`)。旧初週試作(各エージェントの`CLAUDE.md`末尾に移動済み)と合わせて、型の妥当性チェックに使える。
 
 ## 日次投稿ストックの作り方(`content/YYYY-MM-DD.md`)
 
