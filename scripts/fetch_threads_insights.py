@@ -8,7 +8,7 @@
     THREADS_ACCESS_TOKEN - 長期アクセストークン
     THREADS_USER_ID       - ThreadsユーザーID
 
-strategy/06_api_setup.md の手順でトークンを取得してから実行する。
+docs/setup/threads-api.md(strategy/06_api_setup.md のコピー)の手順でトークンを取得してから実行する。
 """
 import datetime
 import json
@@ -84,7 +84,7 @@ def main() -> None:
     if not token or not user_id:
         print(
             "THREADS_ACCESS_TOKEN / THREADS_USER_ID が設定されていません。\n"
-            "strategy/06_api_setup.md の手順でトークンを取得し、.envに設定してください。",
+            "docs/setup/threads-api.md(strategy/06_api_setup.md のコピー)の手順でトークンを取得し、.envに設定してください。",
             file=sys.stderr,
         )
         sys.exit(1)

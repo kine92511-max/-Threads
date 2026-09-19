@@ -10,6 +10,24 @@
 - [strategy/04_post_templates.md](strategy/04_post_templates.md) — 投稿テンプレート(バズる型のリサーチ根拠付き)
 - [strategy/05_reply_guidelines.md](strategy/05_reply_guidelines.md) — リプライ対応ガイドライン(会話を伸ばす返信の型)
 
+上記5ファイルの内容は、`knowledge/`・`planning/`配下に**参照用コピー**として整理し直したものもあります(下記「ナレッジ・企画の参照用フォルダ」を参照)。元ファイルは削除・変更していません。
+
+## ナレッジ・企画の参照用フォルダ(`knowledge/` / `planning/` / `docs/setup/`)
+
+`strategy/`配下の内容を、用途別に参照しやすく再編集した**コピー**です。実際にエージェントが読むルールは
+引き続き`.claude/agents/`配下のファイルであり、以下は人間が全体像を把握するための参照用です。
+
+- [knowledge/account.md](knowledge/account.md) — アカウントペルソナ・コンセプト(`strategy/01`・`02`の一部のコピー)
+- [knowledge/audience.md](knowledge/audience.md) — 読者(ターゲット)情報。既存資料から確認できる範囲のみ記載し、不明点は「未確認」と明記
+- [knowledge/writing-style.md](knowledge/writing-style.md) — 表記ルール・トーン・投稿テンプレート集約(ルート`CLAUDE.md`・`strategy/02`・`04`のコピー)
+- [knowledge/reply-guidelines.md](knowledge/reply-guidelines.md) — リプライ対応ガイドライン(`strategy/05`のコピー)
+- `knowledge/products/TEMPLATE.md` — 商品情報を記録するテンプレート(雛形のみ。実データは未投入)
+- [planning/content-calendar.md](planning/content-calendar.md) — 投稿カレンダー(`strategy/02`・`03`のコピー)
+- `planning/ideas.md` — ネタストック(現時点では空)
+- [docs/setup/threads-api.md](docs/setup/threads-api.md) — Threads APIセットアップ手順(`strategy/06`のコピー)
+- [docs/setup/affiliate-link.md](docs/setup/affiliate-link.md) — 楽天アフィリエイトリンク取得手順(`strategy/07`のコピー)
+- [docs/setup/rakuten-api.md](docs/setup/rakuten-api.md) — 楽天商品検索APIセットアップ手順(`strategy/08`のコピー)
+
 ## プロジェクト全体ルール
 
 - [CLAUDE.md](CLAUDE.md) — パイプライン全体像、全投稿共通の表記ルール、アフィリエイト投稿の構成ルール、事実確認の方針、過去の失敗事例をまとめたルートルールファイル
@@ -71,11 +89,22 @@
 - `rakuten_search.py` — 楽天API接続テスト用スクリプト。**楽天のAPI仕様が2026年2月頃に変更されている**ことが判明済み(詳細は[strategy/08_rakuten_api_setup.md](strategy/08_rakuten_api_setup.md)末尾を参照)。サーバーサイドからの呼び出しが未解決の403エラーで失敗しており、楽天サポートに問い合わせ中。
 - `content/` — 実際の投稿30件(2026年9月分)をスクリーンショットから全数書き起こし・検証したデータ(CSV/JSON)と、そこから抽出したテンプレート、日次の投稿ストック(`YYYY-MM-DD.md`)。旧初週試作(各エージェントフォルダの`past-work/`に移動済み)と合わせて、型の妥当性チェックに使える。
 
-## 日次投稿ストックの作り方(`content/YYYY-MM-DD.md`)
+## 原稿の保存先【確定ルール】(`drafts/` / `outputs/` / `content/`)
 
-1. リサーチ担当 → 構成担当 → 共感ライター/アフィリエイトライター → 校正担当 の順で5本(7:00・10:00・12:00・17:00・21:00)を作成する
+**執筆後の下書きは`drafts/`に保存する。校正を経た原稿はユーザーに提示し、明示的な承認を得てから`outputs/`に保存する。`content/`は既存投稿・旧テンプレシステムの保管場所として維持し、今後の新規完成原稿の正式な保存先には使用しない。**
+
+- `drafts/` — 執筆担当(共感ライター/アフィリエイトライター)の本文を、校正担当に渡す前に保存する場所(標準運用。ルート`CLAUDE.md`「原稿の保存先【確定ルール】」参照)
+- `drafts/legacy/` — `content/2026-09-18.md`・`2026-09-19.md`のコピー。校正済みだが**ユーザー承認の記録が確認できていない**ため、各ファイル冒頭に「承認状況:不明(記録なし)」と明記している。本文は元ファイルから変更していない
+- `outputs/` — **ユーザーが明示的に承認した完成原稿の正式な保存先**。承認済みの原稿がまだ無いため現時点では空
+- `content/` — 既存投稿・旧テンプレシステムの保管場所。**新規の完成原稿は保存しない**(既存ファイルは削除・移動・書き換えをしない)
+- `analytics/posts.csv` — 投稿実績記録用(現時点ではヘッダーのみ、データなし)
+- `analytics/weekly-review.md`・`analytics/experiments.md` — 分析・検証記録用のテンプレート(現時点では見出しのみ)
+
+## 日次投稿ストックの作り方(承認後は`outputs/YYYY-MM-DD.md`)
+
+1. リサーチ担当 → 構成担当 → 共感ライター/アフィリエイトライター → 校正担当 の順で5本(7:00・10:00・12:00・17:00・21:00)を作成する。執筆後の下書きは`drafts/`に保存し、**ユーザーの明示的な承認を得てから`outputs/YYYY-MM-DD.md`に保存する**
 2. **校正担当の校正時に必ずファクトチェックを行う**(発達段階の描写が年齢相応か、アフィリエイト商品の特徴が商品ページの実際の記載と一致しているか、悩みと商品が論理的につながっているか)
-3. 各投稿の下に**「根拠(ファクトチェック)」欄を設け、確認した出典URLや商品ページの確認結果を残す**。創作・一般的なあるあるの範囲であることが分かっている場合はその旨明記する(`content/2026-09-18.md`が実例)
+3. 各投稿の下に**「根拠(ファクトチェック)」欄を設け、確認した出典URLや商品ページの確認結果を残す**。創作・一般的なあるあるの範囲であることが分かっている場合はその旨明記する(書式の実例は`content/2026-09-18.md`および`drafts/legacy/2026-09-18.md`)
 4. 過去の失敗事例(再発防止のため必ず確認する):
    - 「2歳児が全力疾走する」という不正確な発達描写(正しくは「よく転ぶ・小走り」)
    - 商品ページと異なる素材の誤記(シリコン製→実際はポリエステル/TPU)

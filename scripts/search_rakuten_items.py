@@ -8,7 +8,7 @@
     RAKUTEN_APP_ID        - 楽天Developersで発行したアプリID(必須)
     RAKUTEN_AFFILIATE_ID  - 楽天アフィリエイトID(任意。指定するとアフィリエイトURLが取得できる)
 
-strategy/08_rakuten_api_setup.md の手順でIDを取得してから実行する。
+docs/setup/rakuten-api.md(strategy/08_rakuten_api_setup.md のコピー)の手順でIDを取得してから実行する。
 """
 import datetime
 import json
@@ -81,7 +81,7 @@ def main() -> None:
     if not app_id:
         print(
             "RAKUTEN_APP_ID が設定されていません。\n"
-            "strategy/08_rakuten_api_setup.md の手順でアプリIDを取得し、.envに設定してください。",
+            "docs/setup/rakuten-api.md(strategy/08_rakuten_api_setup.md のコピー)の手順でアプリIDを取得し、.envに設定してください。",
             file=sys.stderr,
         )
         sys.exit(1)
